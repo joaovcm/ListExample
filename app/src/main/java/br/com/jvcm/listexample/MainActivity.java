@@ -81,6 +81,5 @@ public class MainActivity extends AppCompatActivity {
         mDataset.add(corolla);
         mDataset.add(hrv);
         mDataset.add(ferrari);
-       // mDataset.notify(get);
     }
 }
