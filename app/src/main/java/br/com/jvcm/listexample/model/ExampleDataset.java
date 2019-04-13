@@ -1,12 +1,13 @@
 package br.com.jvcm.listexample.model;
 
+import android.support.annotation.DrawableRes;
 import android.widget.Button;
 
 public class ExampleDataset {
 
     private String name;
     private String copyright;
-    private String image;
+    private @DrawableRes int image;
     private Button btninsert;
 
 
@@ -26,11 +27,11 @@ public class ExampleDataset {
         this.copyright = copyright;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 }

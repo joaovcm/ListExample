@@ -3,6 +3,8 @@ package br.com.jvcm.listexample.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.jvcm.listexample.R;
+
 public class ListCollectionExample {
 
     public static void main(String[] args) {
@@ -10,17 +12,17 @@ public class ListCollectionExample {
         ExampleDataset corolla = new ExampleDataset();
         corolla.setName("Corolla");
         corolla.setCopyright("Toyota");
-        corolla.setImage("image.png");
+        corolla.setImage(R.drawable.ic_logo_gm);
 
         ExampleDataset hrv = new ExampleDataset();
         hrv.setName("HRV");
         hrv.setCopyright("Honda");
-        hrv.setImage("image.png");
+        hrv.setImage(R.drawable.ic_honda_logo);
 
         ExampleDataset ferrari = new ExampleDataset();
         ferrari.setName("Spider");
         ferrari.setCopyright("Ferrari");
-        ferrari.setImage("image.png");
+        ferrari.setImage(R.drawable.ic_logo_gm);
 
 
         List<ExampleDataset> mDataset = new ArrayList<>();

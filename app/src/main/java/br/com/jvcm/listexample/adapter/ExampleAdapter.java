@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.Locale;
 
 import br.com.jvcm.listexample.R;
 import br.com.jvcm.listexample.model.ExampleDataset;
@@ -41,9 +40,7 @@ public class ExampleAdapter extends RecyclerView
 
         holder.tvCarName.setText(set.getName());
         holder.tvCarCorpyright.setText(set.getCopyright());
-        //holder.imgCar.setImageResource(set.getImage());
-
-        holder.btninsert.setOnClickListener(view -> updateItem(position));
+        holder.imgCar.setImageResource(set.getImage());
 
     }
 
@@ -66,7 +63,6 @@ public class ExampleAdapter extends RecyclerView
             tvCarCorpyright = itemView.findViewById(R.id.tv_car_copyright);
             imgCar = itemView.findViewById(R.id.img_car);
             btninsert = itemView.findViewById(R.id.btninsert);
-
 
         }
     }

@@ -3,18 +3,27 @@ package br.com.jvcm.listexample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.jvcm.listexample.adapter.ExampleAdapter;
 import br.com.jvcm.listexample.model.ExampleDataset;
+import br.com.jvcm.listexample.utilies.AppUtil;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private ExampleAdapter mAdapter;
     private List<ExampleDataset> mDataset;
+    private Button btnInsertCar;
+
+    private EditText edtCarName;
+    private EditText edtCopyright;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,23 +34,46 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new ExampleAdapter(mDataset);
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setAdapter(mAdapter);
+        btnInsertCar = findViewById(R.id.btninsert);
+        edtCarName = findViewById(R.id.edt_car_name);
+        edtCopyright = findViewById(R.id.edt_car_copyright);
+
+        btnInsertCar.setOnClickListener(this::onClick);
+    }
+
+
+    public void onClick(View view){
+             ExampleDataset dataset = new ExampleDataset();
+             dataset.setName(edtCarName.getText().toString());
+             dataset.setCopyright(edtCopyright.getText().toString());
+
+             if(dataset.getCopyright().equalsIgnoreCase("Honda")){
+                 dataset.setImage(R.drawable.ic_honda_logo);
+             }else{
+                 dataset.setImage(R.drawable.ic_logo_gm);
+             }
+
+             mDataset.add(dataset);
+             mAdapter.notifyDataSetChanged();
+
+        AppUtil.hideKeyboardFrom(MainActivity.this, edtCopyright);
     }
 
     private void populateMock() {
         ExampleDataset corolla = new ExampleDataset();
         corolla.setName("Corolla");
         corolla.setCopyright("Toyota");
-        corolla.setImage("image.png");
+        corolla.setImage(R.drawable.ic_logo_gm);
 
         ExampleDataset hrv = new ExampleDataset();
         hrv.setName("HRV");
         hrv.setCopyright("Honda");
-        hrv.setImage("image.png");
+        hrv.setImage(R.drawable.ic_honda_logo);
 
         ExampleDataset ferrari = new ExampleDataset();
         ferrari.setName("Spider");
         ferrari.setCopyright("Ferrari");
-        ferrari.setImage("image.png");
+        ferrari.setImage(R.drawable.ic_logo_gm);
 
         mDataset = new ArrayList<>();
         mDataset.add(corolla);
