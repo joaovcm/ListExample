@@ -4,14 +4,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.jvcm.listexample.adapter.ExampleAdapter;
+import br.com.jvcm.listexample.enums.CarEnum;
 import br.com.jvcm.listexample.enums.CopryrightCarEnum;
 import br.com.jvcm.listexample.model.ExampleDataset;
 import br.com.jvcm.listexample.utilies.AppUtil;
@@ -22,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private ExampleAdapter mAdapter;
     private List<ExampleDataset> mDataset;
     private Button btnInsertCar;
+    private Spinner spnCopyright;
 
     private EditText edtCarName;
-    private EditText edtCopyright;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         btnInsertCar = findViewById(R.id.btninsert);
         edtCarName = findViewById(R.id.edt_car_name);
-        edtCopyright = findViewById(R.id.edt_car_copyright);
+        spnCopyright = findViewById(R.id.spn_copyright);
+
+        spnCopyright.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, CopryrightCarEnum.getCollection()));
 
         btnInsertCar.setOnClickListener(this::onClick);
     }
@@ -46,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view){
              ExampleDataset dataset = new ExampleDataset();
              dataset.setName(edtCarName.getText().toString());
-             dataset.setCopyright(edtCopyright.getText().toString());
+             dataset.setCopyright(spnCopyright.getSelectedItem().toString());
 
              mDataset.add(dataset);
              mAdapter.notifyDataSetChanged();
 
         CopryrightCarEnum.FERRARI.name();
 
-        AppUtil.hideKeyboardFrom(MainActivity.this, edtCopyright);
+        AppUtil.hideKeyboardFrom(MainActivity.this, edtCarName);
     }
 
     private void populateMock() {

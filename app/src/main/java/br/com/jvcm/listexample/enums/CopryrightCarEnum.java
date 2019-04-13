@@ -2,6 +2,9 @@ package br.com.jvcm.listexample.enums;
 
 import android.support.annotation.DrawableRes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.jvcm.listexample.R;
 
 public enum CopryrightCarEnum {
@@ -22,6 +25,17 @@ public enum CopryrightCarEnum {
 
     public int getResource() {
         return mResource;
+    }
+
+    public static List getCollection(){
+       List itens = new ArrayList();
+
+       for(CopryrightCarEnum item: CopryrightCarEnum.values()){
+           if(item==NONE) break;
+           itens.add(item.mName);
+       }
+
+       return itens;
     }
 
     public static CopryrightCarEnum fromString(String name){

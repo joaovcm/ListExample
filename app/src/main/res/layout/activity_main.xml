@@ -19,12 +19,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/edt_car_copyright"
-        android:hint="@string/activity_main_edt_insert_copyright"
-        android:layout_width="0dp"
-        android:layout_weight="2"
-        android:layout_height="wrap_content" />
+    <!--<EditText-->
+        <!--android:id="@+id/edt_car_copyright"-->
+        <!--android:hint="@string/activity_main_edt_insert_copyright"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="2"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <Spinner
+            android:id="@+id/spn_copyright"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"/>
 
         <Button
             android:text="@string/activity_main_btnInsert"
