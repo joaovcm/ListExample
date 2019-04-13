@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.jvcm.listexample.adapter.ExampleAdapter;
+import br.com.jvcm.listexample.enums.CopryrightCarEnum;
 import br.com.jvcm.listexample.model.ExampleDataset;
 import br.com.jvcm.listexample.utilies.AppUtil;
 
@@ -47,14 +48,10 @@ public class MainActivity extends AppCompatActivity {
              dataset.setName(edtCarName.getText().toString());
              dataset.setCopyright(edtCopyright.getText().toString());
 
-             if(dataset.getCopyright().equalsIgnoreCase("Honda")){
-                 dataset.setImage(R.drawable.ic_honda_logo);
-             }else{
-                 dataset.setImage(R.drawable.ic_logo_gm);
-             }
-
              mDataset.add(dataset);
              mAdapter.notifyDataSetChanged();
+
+        CopryrightCarEnum.FERRARI.name();
 
         AppUtil.hideKeyboardFrom(MainActivity.this, edtCopyright);
     }

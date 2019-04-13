@@ -3,11 +3,14 @@ package br.com.jvcm.listexample.model;
 import android.support.annotation.DrawableRes;
 import android.widget.Button;
 
+import br.com.jvcm.listexample.enums.CopryrightCarEnum;
+
 public class ExampleDataset {
 
     private String name;
     private String copyright;
-    private @DrawableRes int image;
+    private @DrawableRes
+    int image;
     private Button btninsert;
 
 
@@ -25,6 +28,12 @@ public class ExampleDataset {
 
     public void setCopyright(String copyright) {
         this.copyright = copyright;
+        setCopyrightImage();
+    }
+
+    private void setCopyrightImage() {
+        setImage(CopryrightCarEnum.
+                fromString(getCopyright()).getResource());
     }
 
     public int getImage() {
