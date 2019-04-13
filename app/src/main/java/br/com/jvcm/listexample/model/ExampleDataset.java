@@ -1,10 +1,14 @@
 package br.com.jvcm.listexample.model;
 
+import android.widget.Button;
+
 public class ExampleDataset {
 
     private String name;
     private String copyright;
     private String image;
+    private Button btninsert;
+
 
     public String getName() {
         return name;
