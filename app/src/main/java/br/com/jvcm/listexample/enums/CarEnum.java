@@ -5,11 +5,11 @@ import android.support.annotation.DrawableRes;
 import br.com.jvcm.listexample.R;
 
 public enum CarEnum {
-    GOL("Gol", R.drawable.ic_launcher_foreground),
-    HB20("HB20", R.drawable.ic_launcher_foreground),
-    SAVEIRO("Saveiro", R.drawable.ic_launcher_foreground),
-    ONIX("Onix", R.drawable.ic_launcher_foreground),
-    UNO("Uno", R.drawable.ic_launcher_foreground),
+    GOL("Gol", R.drawable.ic_gol_car),
+    HB20("HB20", R.drawable.ic_hb20_car),
+    SAVEIRO("Saveiro", R.drawable.ic_saveiro_car),
+    ONIX("Onix", R.drawable.ic_onix_car),
+    UNO("Uno", R.drawable.ic_uno_car),
     NONE("NOME", R.drawable.ic_launcher_foreground);
 
     private String mCarName;
