@@ -11,8 +11,11 @@ public enum CopryrightCarEnum {
     HONDA("Honda", R.drawable.ic_honda_logo),
     TOYOTA("Toyota", R.drawable.ic_launcher_foreground),
     GM("Gm", R.drawable.ic_logo_gm),
-    FIAT("Fiat", R.drawable.ic_launcher_foreground),
-    FERRARI("Ferrari", R.drawable.ic_launcher_foreground),
+    FIAT("Fiat", R.drawable.ic_fiat_logo),
+    FERRARI("Ferrari", R.drawable.ic_ferrari_logo),
+    FORD("Ford", R.drawable.ic_ford_logo),
+    HYUNDAI("Hyundai", R.drawable.ic_hyundai_logo),
+    VOLKSWAGEN("Volkswagen", R.drawable.ic_volkswagen_logo),
     NONE("none", 0);
 
     private String mName;

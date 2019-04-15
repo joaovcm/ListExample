@@ -3,6 +3,7 @@ package br.com.jvcm.listexample.model;
 import android.support.annotation.DrawableRes;
 import android.widget.Button;
 
+import br.com.jvcm.listexample.enums.CarEnum;
 import br.com.jvcm.listexample.enums.CopryrightCarEnum;
 
 public class ExampleDataset {
@@ -20,6 +21,7 @@ public class ExampleDataset {
 
     public void setName(String name) {
         this.name = name;
+        setCarImage();
     }
 
     public String getCopyright() {
@@ -34,6 +36,11 @@ public class ExampleDataset {
     private void setCopyrightImage() {
         setImage(CopryrightCarEnum.
                 fromString(getCopyright()).getResource());
+    }
+
+    private void setCarImage(){
+        setImage(CarEnum.
+                fromString(getName()).getResource());
     }
 
     public int getImage() {

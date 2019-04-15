@@ -41,7 +41,7 @@ public class ExampleAdapter extends RecyclerView
         holder.tvCarName.setText(set.getName());
         holder.tvCarCorpyright.setText(set.getCopyright());
         holder.imgCar.setImageResource(set.getImage());
-        holder.img_copyright.setImageResource(set.getImage());
+        holder.imgCopyright.setImageResource(set.getImage());
 
     }
 
@@ -54,8 +54,8 @@ public class ExampleAdapter extends RecyclerView
         TextView tvCarName;
         TextView tvCarCorpyright;
         ImageView imgCar;
-        ImageView img_copyright;
-        Button btninsert;
+        ImageView imgCopyright;
+        Button btnInsert;
 
 
         public DataObjectHolder(@NonNull View itemView) {
@@ -64,8 +64,8 @@ public class ExampleAdapter extends RecyclerView
             tvCarName = itemView.findViewById(R.id.tv_car_name);
             tvCarCorpyright = itemView.findViewById(R.id.tv_car_copyright);
             imgCar = itemView.findViewById(R.id.img_car);
-            btninsert = itemView.findViewById(R.id.btninsert);
-            img_copyright = itemView.findViewById(R.id.img_copyright);
+            btnInsert = itemView.findViewById(R.id.btninsert);
+            imgCopyright = itemView.findViewById(R.id.img_copyright);
 
         }
     }

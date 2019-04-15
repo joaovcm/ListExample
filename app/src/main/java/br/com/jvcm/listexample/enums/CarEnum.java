@@ -31,4 +31,5 @@ public enum CarEnum {
     }
 
 
+    public int getResource() { return mResurce; }
 }
