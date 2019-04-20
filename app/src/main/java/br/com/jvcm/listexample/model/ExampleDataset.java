@@ -10,8 +10,10 @@ public class ExampleDataset {
 
     private String name;
     private String copyright;
-    private @DrawableRes
-    int image;
+    @DrawableRes
+    private int imageCopyright;
+    @DrawableRes
+    private int imgeCar;
     private Button btninsert;
 
 
@@ -34,20 +36,27 @@ public class ExampleDataset {
     }
 
     private void setCopyrightImage() {
-        setImage(CopryrightCarEnum.
+        setImageCopyright(CopryrightCarEnum.
                 fromString(getCopyright()).getResource());
     }
 
-    private void setCarImage(){
-        setImage(CarEnum.
-                fromString(getName()).getResource());
+    public int getImageCopyright() {
+        return imageCopyright;
     }
 
-    public int getImage() {
-        return image;
+    public void setImageCopyright(int imageCopyright) {
+        this.imageCopyright = imageCopyright;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public int getImgeCar() {
+        return imgeCar;
+    }
+
+    public void setImgeCar(int imgeCar) {
+        this.imgeCar = imgeCar;
+    }
+
+    private void setCarImage() {
+        setImgeCar(CarEnum.fromString(getName()).getResource());
     }
 }

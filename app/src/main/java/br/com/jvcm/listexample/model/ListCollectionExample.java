@@ -12,17 +12,17 @@ public class ListCollectionExample {
         ExampleDataset corolla = new ExampleDataset();
         corolla.setName("Corolla");
         corolla.setCopyright("Toyota");
-        corolla.setImage(R.drawable.ic_logo_gm);
+        corolla.setImageCopyright(R.drawable.ic_logo_gm);
 
         ExampleDataset hrv = new ExampleDataset();
         hrv.setName("HRV");
         hrv.setCopyright("Honda");
-        hrv.setImage(R.drawable.ic_honda_logo);
+        hrv.setImageCopyright(R.drawable.ic_honda_logo);
 
         ExampleDataset ferrari = new ExampleDataset();
         ferrari.setName("Spider");
         ferrari.setCopyright("Ferrari");
-        ferrari.setImage(R.drawable.ic_logo_gm);
+        ferrari.setImageCopyright(R.drawable.ic_logo_gm);
 
 
         List<ExampleDataset> mDataset = new ArrayList<>();

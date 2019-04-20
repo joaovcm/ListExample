@@ -40,8 +40,8 @@ public class ExampleAdapter extends RecyclerView
 
         holder.tvCarName.setText(set.getName());
         holder.tvCarCorpyright.setText(set.getCopyright());
-        holder.imgCar.setImageResource(set.getImage());
-        holder.imgCopyright.setImageResource(set.getImage());
+        holder.imgCar.setImageResource(set.getImgeCar());
+        holder.imgCopyright.setImageResource(set.getImageCopyright());
 
     }
 

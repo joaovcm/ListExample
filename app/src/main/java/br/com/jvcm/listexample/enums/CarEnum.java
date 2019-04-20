@@ -22,14 +22,12 @@ public enum CarEnum {
 
     public static CarEnum fromString(String value){
         for (CarEnum item: values()){
-            if (item.mCarName.equals(value)){
+            if (item.mCarName.equalsIgnoreCase(value)){
                 return item;
             }
         }
         return NONE;
 
     }
-
-
     public int getResource() { return mResurce; }
 }

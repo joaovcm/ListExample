@@ -8,13 +8,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.jvcm.listexample.adapter.ExampleAdapter;
-import br.com.jvcm.listexample.enums.CarEnum;
 import br.com.jvcm.listexample.enums.CopryrightCarEnum;
 import br.com.jvcm.listexample.model.ExampleDataset;
 import br.com.jvcm.listexample.utilies.AppUtil;
@@ -65,17 +63,17 @@ public class MainActivity extends AppCompatActivity {
         ExampleDataset corolla = new ExampleDataset();
         corolla.setName("Corolla");
         corolla.setCopyright("Toyota");
-        corolla.setImage(R.drawable.ic_logo_gm);
+        corolla.setImageCopyright(R.drawable.ic_logo_gm);
 
         ExampleDataset hrv = new ExampleDataset();
         hrv.setName("HRV");
         hrv.setCopyright("Honda");
-        hrv.setImage(R.drawable.ic_honda_logo);
+        hrv.setImageCopyright(R.drawable.ic_honda_logo);
 
         ExampleDataset ferrari = new ExampleDataset();
         ferrari.setName("Spider");
         ferrari.setCopyright("Ferrari");
-        ferrari.setImage(R.drawable.ic_logo_gm);
+        ferrari.setImageCopyright(R.drawable.ic_logo_gm);
 
         mDataset = new ArrayList<>();
         mDataset.add(corolla);
